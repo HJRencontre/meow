@@ -5,9 +5,3 @@ services:
       dockerfile: docker/Dockerfile
     expose:
       - "8081"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.front.rule=Host(`maylis.hermann-jude.tech`)"
-      - "traefik.http.routers.front.entrypoints=websecure"
-      - "traefik.http.routers.front.tls.certresolver=myresolver"
-      - "traefik.http.services.front.loadbalancer.server.port=8081"
